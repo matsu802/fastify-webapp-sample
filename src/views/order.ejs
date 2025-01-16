@@ -29,8 +29,7 @@
       <h3>購入する</h3>
       <label for="fullname">お名前（受取時に必要です）</label>
       <input reqyured id="fullname" name="fullname" value="<%= query.fullname ? query.fullname : user?.fullname %>" />
-      <label for="tel">電話番号（連絡時に必要です）</label>
-      <input required id="tel" type="tel" name="tel" value="<%= query.tel ? query.tel : user?.tel %>"/>
+      <%- include('components/telInput.ejs', {tel: query.tel ? query.tel : user?.tel}) %>
       <label for="orderDate">受け取り日</label>
       <input required id="orderDate" name="orderDate" max="9999-12-31" type="date" value="<%= query.orderDate %>"/>
       <label for="receiveTime">受け取り目安時間</label>
