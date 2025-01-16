@@ -11,6 +11,8 @@ beforeEach(async () => {
 test.each`
     pass          | label
     ${"12345abc"} | ${"8文字"}
+    ${"!@#$%^&*"} | ${"特殊文字で8文字"}
+    ${"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890"} | ${"100文字"}
 
 `("sLabelはエラーにならない", (data) => {
     const passwordInputElement = document.querySelector('input[name="password"]');
