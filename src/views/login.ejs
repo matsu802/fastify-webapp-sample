@@ -4,7 +4,7 @@
     <label for="username">ユーザー名</label>
     <input id="username" type="text" name="username"/>
     <label for="password">パスワード</label>
-    <input id="password" type="password" name="password"/>
+    <input id="password" type="password" name="password" pattern="^[\w\W]{8,}$" required/>
     <input type="submit" value="ログイン"/>
   </form>
   <a href="/items">商品一覧に戻る</a>
